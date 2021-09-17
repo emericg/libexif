@@ -65,3 +65,6 @@ depcomp
 INSTALL
 test-driver
 ChangeLog.git
+
+# temporary build directory
+build/
