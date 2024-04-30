@@ -63,7 +63,7 @@ const char *
 mnote_apple_tag_get_title(MnoteAppleTag t) {
     unsigned int i;
 
-    (void) bindtextdomain(GETTEXT_PACKAGE, LOCALEDIR);
+    bindtextdomain(GETTEXT_PACKAGE, LOCALEDIR);
     for (i = 0; i < sizeof (table) / sizeof (table[0]); i++) {
         if (table[i].tag == t) {
             return _(table[i].title);
@@ -82,7 +82,7 @@ mnote_apple_tag_get_description(MnoteAppleTag t) {
             if (!table[i].description || !*table[i].description) {
                 return "";
             }
-            (void) bindtextdomain(GETTEXT_PACKAGE, LOCALEDIR);
+            bindtextdomain(GETTEXT_PACKAGE, LOCALEDIR);
             return _(table[i].description);
         }
     }
